@@ -1,0 +1,21 @@
+Introduce el nombre: <input type="text" name="" id="nombre" #nombre (input)="nombre.value">
+<p>Nombre del empleado: {{nombre.value}}</p>
+
+Introduce el apellido: <input type="text" name="" id="apellido" #apellido (input)="apellido.value">
+<p>Apellido del empleado: {{apellido.value}}</p>
+
+Introduce la edad: <input type="number" id="edad" min="1" max="60" (input)="edad.value" #edad>
+<p>Edad del empleado: {{+edad.value < 60 && +edad.value >1 ? edad.value : "Invalido"}}</p>
+
+Introduce la empresa: <input type="text" [disabled]=" +edad.value >= 18 && +edad.value > 1 && +edad.value < 60 ? false : true " #empresa (input)="empresa.value">
+<p>Empresa del empleado: {{empresa.value}}</p>
+
+<br/>
+<br/>
+<br/>
+Registrado Facha?: {{textoFacha}}
+<br/>
+<br/>
+<br/>
+Registrado: SI <input type="radio" name="nRegistro" value="Si" id="rSi" #rSi (click)="deployVentana($event)"> 
+NO <input type="radio" name="nRegistro" value="No" id="rNo" (click)="deployVentana($event)">
