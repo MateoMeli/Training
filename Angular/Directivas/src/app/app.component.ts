@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Directivas';
+  titulo = "Registro de usuario";
+
+  nombre:string = "";
+  apellido:string = "";
+  cargo:string = "";
+
+  mensaje = "";
+
+  registrado = false;
+
+  entradas: object[];
+
+  constructor()
+  {
+    this.entradas=[
+      {titulo:"anashe"}
+    ]
+  }
+
+  registrarUsuario(){
+    this.registrado = true;
+    this.mensaje = "Usuario creado con exito con el nombre ";
+  }
 }
