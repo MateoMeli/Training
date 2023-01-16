@@ -21,7 +21,6 @@ export class CaracteriscasEmpleadoCComponent implements OnInit{
 
   agregarCaracteristica(value:string)
   {
-    this.servicio.mostrarAlerta(value);
     this.caracteristicasEmpleado.emit(value);
   }
 }
